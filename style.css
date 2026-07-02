@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #0f172a;
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #00f5ff33, transparent 40%),
+                radial-gradient(circle at bottom, #ff00ff33, transparent 40%);
+    animation: move 10s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes move {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(20px); }
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* TITLE */
+h1 {
+    font-size: 40px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #00f5ff, #ff00ff);
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+.about,
+.services,
+.why,
+.pricing,
+.contact {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* GRID CENTER FIX */
+.services,
+.why {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #00f5ff55;
+}
+
+/* PRICING */
+.pricing ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing li {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+    padding: 20px;
+    opacity: 0.6;
+}
